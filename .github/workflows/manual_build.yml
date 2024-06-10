@@ -23,6 +23,7 @@ jobs:
           [
             { tag: minimal, file: Dockerfile.minimal },
             { tag: andriod-ios, file: Dockerfile.android_ios },
+            { tag: dotnet, file: Dockerfile.dotnet },
           ]
 
     name: Build Image
