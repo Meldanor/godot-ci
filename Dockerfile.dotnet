@@ -38,7 +38,7 @@ RUN butler -V
 # This version removes the ios and android templates because they are marked as experimental for C# support or not functional at all
 RUN wget -q https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-${RELEASE_NAME}/Godot_v${GODOT_VERSION}-${RELEASE_NAME}_mono_${GODOT_PLATFORM}.zip \
     && wget -q https://github.com/godotengine/godot-builds/releases/download/${GODOT_VERSION}-${RELEASE_NAME}/Godot_v${GODOT_VERSION}-${RELEASE_NAME}_mono_export_templates.tpz \
-    && mkdir ~/.cache \
+    && mkdir -p ~/.cache \
     && mkdir -p ~/.config/godot \
     && mkdir -p ~/.local/share/godot/export_templates/${GODOT_VERSION}.${RELEASE_NAME}.mono \
     && unzip Godot_v${GODOT_VERSION}-${RELEASE_NAME}_mono_${GODOT_PLATFORM}.zip \
